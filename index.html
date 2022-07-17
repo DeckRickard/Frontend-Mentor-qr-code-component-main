@@ -13,29 +13,58 @@
 
   <style>
     
+    html, body {
+      height:  100%;
+    }
+    
     :root {
       background:  hsl(212, 45%, 89%);
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
     }
 
-    .rounded {
-      border-radius: 25px;
+    .container {
+      height: 100%;
+      display:  flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
     }
 
     #main-panel {
+      display: flex;
+      flex-direction: column;
       margin:  auto;
       background-color: hsl(0, 0%, 100%);
+      width: 20%;
+      padding: 12px 7px;
+    }
+
+    .attribution {
+     font-size: 11px; 
+     text-align: center;
+     height:  5%;
+    }
+
+    .rounded {
+      border-radius: 12px;
+    }
+
+    #qr-code-image {
+      margin: auto;
+      width: 95%;
+      height: 65%;
     }
 
     img {
       display:  block;
-      margin:  auto;
-
+      width: 100%;
     }
 
     #label {
       text-align: center;
+      margin: auto;
+      height: 35%;
     }
 
     h2 {
@@ -47,23 +76,31 @@
     }
     
 
-    .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (max-width: 600px) {
+      #main-panel {
+        width: 85%;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="container">  
     <div class="rounded" id="main-panel">
-      <img class="rounded" src="images/image-qr-code.png" a="https://www.frontendmentor.io/home">
+      <a id="qr-code-image" href="https://www.frontendmentor.io/home"><img class="rounded" src="images/image-qr-code.png"></a>
       <div id="label">
         <h2>Improve your front-end skills by building projects</h2>
         <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
       </div>
     </div>
-
-
-  <div class="attribution">
+    <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Rowan Jeffery-Wall (DeckRicard on GitHub)</a>.
-  </div>
+    Coded by <a href="https://github.com/DeckRickard">Rowan Jeffery-Wall (DeckRickard on GitHub)</a>.
+    </div>
+  </div>  
+
+
+
 </body>
 </html>
